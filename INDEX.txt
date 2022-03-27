@@ -1,30 +1,34 @@
 
+     ***** MODULE *****
 
-     **** ERROR HANDLING ****
+  Introduction
+Consider a scenario where parts of JavaScript code need to be reused. ES6 comes to your 
+rescue with the concept of Modules.
+A module organizes a related set of JavaScript code. A module can contain variables and 
+functions. A module is nothing more than a chunk of JavaScript code written in a file.
+By default, variables and functions of a module are not available for use. Variables and 
+functions within a module should be exported so that they can be accessed from within 
+other files. Modules in ES6 work only in strict mode. This means variables or functions 
+declared in a module will not be accessible globally.
+Exporting a Module
+The export keyword can be used to export components in a module. Exports in a module 
+can be classified as follows:
+ Named Exports 
+ Default Exports
+Named Exports
+Named exports are distinguished by their names. There can be several named exports in 
+a module. A module can export selected components using the syntax given below:
+Syntax 1
+//using multiple export keyword
+export component1
+export component2
+...
+...
+export componentN
+Syntax 2
+Alternatively, components in a module can also be exported using a 
+single export keyword with {} binding syntax as shown below:
+//using single export keyword
+export {component1,component2,....,componentN}
 
-     There are three types of errors in programming: Syntax Errors, Runtime Errors, and
-Logical Errors.
-Syntax Errors
-Syntax errors, also called parsing errors, occur at compile time in traditional 
-programming languages and at interpret time in JavaScript. When a syntax error occurs 
-in JavaScript, only the code contained within the same thread as the syntax error is 
-affected and the rest of the code in other threads get executed assuming nothing in them 
-depends on the code containing the error.
-Runtime Errors
-Runtime errors, also called exceptions, occur during execution (after 
-compilation/interpretation). Exceptions also affect the thread in which they occur, allowing 
-other JavaScript threads to continue normal execution.
-Logical Errors
-Logic errors can be the most difficult type of errors to track down. These errors are not 
-the result of a syntax or runtime error. Instead, they occur when you make a mistake in 
-the logic that drives your script and you do not get the result as expected. 
-You cannot catch those errors, because it depends on your business requirement, what 
-type of logic you want to put in your program.
-JavaScript throws instances of the Error object when runtime errors occur. The following 
-table lists predefined types of the Error object.
-Error Object Description
-EvalError Creates an instance representing an error that occurs regarding 
-the global function eval()
-RangeError Creates an instance representing an error that occurs when a 
-numeric variable or parameter is outside of its valid range
-ReferenceError Creates an instance representing an error that occurs when dereferencing an invalid reference
+
