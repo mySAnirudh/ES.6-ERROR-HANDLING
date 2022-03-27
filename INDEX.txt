@@ -1,0 +1,30 @@
+
+
+     **** ERROR HANDLING ****
+
+     There are three types of errors in programming: Syntax Errors, Runtime Errors, and
+Logical Errors.
+Syntax Errors
+Syntax errors, also called parsing errors, occur at compile time in traditional 
+programming languages and at interpret time in JavaScript. When a syntax error occurs 
+in JavaScript, only the code contained within the same thread as the syntax error is 
+affected and the rest of the code in other threads get executed assuming nothing in them 
+depends on the code containing the error.
+Runtime Errors
+Runtime errors, also called exceptions, occur during execution (after 
+compilation/interpretation). Exceptions also affect the thread in which they occur, allowing 
+other JavaScript threads to continue normal execution.
+Logical Errors
+Logic errors can be the most difficult type of errors to track down. These errors are not 
+the result of a syntax or runtime error. Instead, they occur when you make a mistake in 
+the logic that drives your script and you do not get the result as expected. 
+You cannot catch those errors, because it depends on your business requirement, what 
+type of logic you want to put in your program.
+JavaScript throws instances of the Error object when runtime errors occur. The following 
+table lists predefined types of the Error object.
+Error Object Description
+EvalError Creates an instance representing an error that occurs regarding 
+the global function eval()
+RangeError Creates an instance representing an error that occurs when a 
+numeric variable or parameter is outside of its valid range
+ReferenceError Creates an instance representing an error that occurs when dereferencing an invalid reference
